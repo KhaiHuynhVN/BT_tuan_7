@@ -1,0 +1,56 @@
+@import "../GlobalStyles/GlobalStyles.module.scss";
+
+.blog-item {
+   padding: 10px;
+   background-color: $secondary-color;
+   border-radius: 5px;
+
+   & + & {
+      margin-top: 20px;
+   }
+}
+
+.blog-item-title {
+   margin-bottom: 10px;
+   font-size: 1.5rem;
+}
+
+.blog-item-content {
+   font-size: 1.3rem;
+}
+
+.blog-item__btn-container {
+   margin-top: 10px;
+}
+
+.blog-item__btn {
+   padding: 5px 10px;
+   transition: 0.15s;
+
+   &.edit {
+      color: $secondary-color;
+      background-color: $primary-color;
+      border-radius: 5px;
+      border: 1px solid transparent;
+
+      &:hover {
+         color: $primary-color;
+         background-color: transparent;
+         border-color: $primary-color;
+      }
+   }
+
+   &.delete {
+      margin-left: 10px;
+      color: $tertiary-color;
+      background-color: $quaternary-color;
+      border-radius: 5px;
+      border: 1px solid transparent;
+
+      &:hover {
+         color: $quaternary-color;
+         background-color: transparent;
+         border-color: $quaternary-color;
+      }
+   }
+}

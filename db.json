@@ -1,0 +1,14 @@
+{
+  "posts": [
+    {
+      "title": "123",
+      "content": "asd\n asddasd\n\nsad\na\nsd\nasd\nasd",
+      "id": 2
+    },
+    {
+      "title": "sadas",
+      "content": "asdsa\nasd asdas          dasd            asd",
+      "id": 3
+    }
+  ]
+}
