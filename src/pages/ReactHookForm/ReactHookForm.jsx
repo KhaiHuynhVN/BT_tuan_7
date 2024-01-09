@@ -7,7 +7,15 @@ const schema = yup
    .object()
    .shape({
       name: yup.string().required(),
-      age: yup.number().min(6).required(),
+      age: yup.number().required(),
+      password: yup
+         .string()
+         .required()
+         .min(6)
+         .matches(
+            /^(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])(?=.*[a-z]).{6,}$/,
+            "Must Contain 6 Characters, One Uppercase, One Lowercase, One Number and one special case Character",
+         ),
    })
    .required();
 
@@ -34,6 +42,8 @@ function ReactHookForm() {
             {errors.name?.message && <p className={cx("err-msg")}>{"Name is a required field"}</p>}
             <input type="number" {...register("age", { valueAsNumber: true })} />
             {errors.age?.message && <p className={cx("err-msg")}>{"Age is a required field"}</p>}
+            <input type="password" {...register("password")} />
+            {errors.password?.message && <p className={cx("err-msg")}>{"Password is a required field"}</p>}
             <button type="submit">Submit</button>
          </form>
       </div>
