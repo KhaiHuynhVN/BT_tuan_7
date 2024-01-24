@@ -3,6 +3,8 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 
+import styles from "./ReactHookForm.module.scss";
+
 const schema = yup
    .object()
    .shape({
@@ -18,8 +20,6 @@ const schema = yup
          ),
    })
    .required();
-
-import styles from "./ReactHookForm.module.scss";
 
 const cx = classNames.bind(styles);
 
